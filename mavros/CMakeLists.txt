@@ -184,6 +184,9 @@ pluginlib_export_plugin_description_file(mavros mavros_plugins.xml)
 add_executable(mavros_node src/mavros_node.cpp)
 target_link_libraries(mavros_node mavros)
 
+add_executable(mavros_service_node src/mavros_service.cpp)
+target_link_libraries(mavros_service_node mavros)
+
 ament_python_install_package(${PROJECT_NAME})
 
 # NOTE(vooon): for some reason console_scripts do not work with ament_python!
@@ -191,7 +194,7 @@ install(PROGRAMS scripts/mav
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(TARGETS mavros mavros_node mavros_plugins
+install(TARGETS mavros mavros_node mavros_plugins mavros_service_node
   EXPORT export_${PROJECT_NAME}
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
