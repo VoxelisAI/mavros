@@ -1,4 +1,0 @@
-/mavros:
-  ros__parameters:
-    plugin_denylist:
-      - '*'

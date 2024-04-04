@@ -6,13 +6,37 @@
       - ftp
       - hil
       # extras
-      - altitude
       - debug_value
       - image_pub
-      - px4flow
-      - vibration
       - vision_speed_estimate
       - wheel_odometry
+      - adsb
+      - cam_imu_sync
+      - distance_sensor
+      - fake_gps
+      - gps_status
+      - gps_rtk
+      - mocap_pose_estimate
+      - obstacle_distance
+      - px4flow
+      - rangefinder
+      - trajectory
+      - vision_pose_estimate
+      - servo_state_publisher
+      - guided_target
+      - camera
+      - cellular_status
+      - command
+      - global_position
+      - geofence
+      - gps_input
+      - home_position
+      - landing_target
+      - rallypoint
+      - vision_speed
+      - waypoint
+      - terrain
+      - tdr_radio
 
-    # plugin_allowlist:
-    #   - 'sys_*'
+    plugin_allowlist:
+      - altitude
