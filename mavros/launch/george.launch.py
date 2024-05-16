@@ -16,13 +16,22 @@ def find_device_port(context, *args, **kwargs):
     pid = params['pid']  # Convert hex to int
     device_description = params['usb_description']
     baudrate = params['baud_rate']
+    urls = []
     print(f"Searching for device with VID: {vid}, PID: {pid}, description: {device_description}")
     for port in serial.tools.list_ports.comports():
         print(f"current port: {port.device}, {port.vid}, {port.pid}, {port.description}")
         if port.vid == vid and port.pid == pid and device_description in port.description:
             url = port.device + ":" + str(baudrate)
-            return {'fcu_url': url}
-    return {'fcu_url': ''}
+            urls.append(url)
+    # find device with the lowest port number
+    if urls:
+        url = sorted(urls)[0]
+        print(f"Found device at: {url}")    
+        return {'fcu_url': url}
+    else:
+        print("No device found.")
+        return {'fcu_url': None}
+    
 
 def generate_launch_description():
     config_file_path_arg = DeclareLaunchArgument(

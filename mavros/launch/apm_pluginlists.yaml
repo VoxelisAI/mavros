@@ -1,42 +1,67 @@
 /mavros/**:
   ros__parameters:
     plugin_denylist:
-      # common
-      - actuator_control
-      - ftp
-      - hil
-      # extras
-      - debug_value
-      - image_pub
-      - vision_speed_estimate
-      - wheel_odometry
       - adsb
       - cam_imu_sync
-      - distance_sensor
-      - fake_gps
-      - gps_status
-      - gps_rtk
-      - mocap_pose_estimate
-      - obstacle_distance
-      - px4flow
-      - rangefinder
-      - trajectory
-      - vision_pose_estimate
-      - servo_state_publisher
-      - guided_target
       - camera
       - cellular_status
-      - command
+      - cmd
+      - companion_process
+      - debug_value
+      - distance_sensor
+      - esc_status
+      - esc_telemetry
+      - fake_gps
+      - ftp
       - global_position
-      - geofence
       - gps_input
+      - gps_rtk
+      - gpsstatus
+      - guided_target
+      - hil
       - home_position
+      # - imu
       - landing_target
+      - local_position
+      - log_transfer
+      - mag_calibration
+      - manual_control
+      - mavros
+      - mavros_node
+      - mavros_router
+      - mission
+      - mocap
+      - mount_control
+      - nav_controller_output
+      - obstacle
+      - odometry
+      - onboard_computer
+      - optical_flow
+      - param
+      - play_tune
+      - px4flow
       - rallypoint
-      - vision_speed
-      - waypoint
-      - terrain
+      - rangefinder
+      - rc
+      - setpoint_accel
+      - setpoint_attitude
+      - setpoint_position
+      - setpoint_raw
+      - setpoint_trajectory
+      - setpoint_velocity
+      - sys
       - tdr_radio
+      - terrain
+      - time
+      - trajectory
+      - transform_listener_impl_aaaab713dbf8
+      - tunnel
+      - vfr_hud
+      - vibration
+      - vision_pose
+      - vision_speed
+      - wheel_odometry
+      - wind
 
-    plugin_allowlist:
-      - altitude
+    # plugin_allowlist:
+
